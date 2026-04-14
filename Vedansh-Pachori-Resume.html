@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vedansh Pachori - Resume</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.5;
+            color: #333;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #fff;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+            color: #1a1a1a;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        h2 {
+            font-size: 18px;
+            color: #2c3e50;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 5px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #1a1a1a;
+            display: flex;
+            justify-content: space-between;
+        }
+        .contact-info {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .contact-info span {
+            margin-right: 15px;
+        }
+        .contact-info a {
+            color: #2c3e50;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        ul {
+            margin-top: 0;
+            padding-left: 20px;
+            font-size: 14px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+            font-size: 14px;
+        }
+        .skills-category {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .date-location {
+            font-weight: normal;
+            color: #666;
+        }
+        .highlight {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Vedansh Pachori</h1>
+        <div class="contact-info">
+            <span>Email: <a href="mailto:vedansh.job@gmail.com">vedansh.job@gmail.com</a></span>
+            <span>Web: <a href="https://www.iamvedansh.com" target="_blank" rel="noopener noreferrer">iamvedansh.com</a></span>
+        </div>
+    </header>
+
+    <section>
+        <h2>Professional Summary</h2>
+        <p>Senior DevOps & Platform Engineering Consultant with 8+ years of expertise in architecting, automating, and optimising IT infrastructure for large-scale enterprise environments. Specialised in high-availability Kubernetes deployments, multi-cloud infrastructure (AWS, Azure, GCP), and advanced DevSecOps practices. Proven track record of enhancing system resilience, reducing deployment lead times, and delivering production-grade tooling for global clients. Available for remote contracts across EU, US, and UAE.</p>
+    </section>
+
+    <section>
+        <h2>Skills & Technologies</h2>
+        <div class="skills-grid">
+            <div><span class="skills-category">Orchestration & Containerisation:</span> Kubernetes (K8s), Helm, Istio (Ambient Mesh), Docker, Vagrant, KVM</div>
+            <div><span class="skills-category">Infrastructure & Cloud:</span> AWS (IoT Core, SiteWise), Azure, GCP, IBM Cloud, Pivotal Cloud Foundry</div>
+            <div><span class="skills-category">Infrastructure as Code:</span> Terraform, Ansible, SaltStack, CloudFormation</div>
+            <div><span class="skills-category">Version Control & CI/CD:</span> Git, GitHub, Bitbucket, GitLab CI/CD, Jenkins, GitOps</div>
+            <div><span class="skills-category">Security & DevSecOps:</span> RBAC, Trivy, Custom Admission Controllers, Service Mesh Security, Husky Hooks</div>
+            <div><span class="skills-category">Monitoring & Logging:</span> Prometheus, Grafana, ELK Stack, Datadog, New Relic, LogDNA, Dynatrace</div>
+            <div><span class="skills-category">Scripting & Automation:</span> Python, Bash/Shell, Groovy, Core Java</div>
+            <div><span class="skills-category">Database & Streaming:</span> MongoDB, Kafka, PostgreSQL</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Professional Experience</h2>
+
+        <div class="job">
+            <h3><span>Nagarro — Senior DevOps Engineer</span> <span class="date-location">2021 – Present</span></h3>
+
+            <p><strong>Infrastructure & Cloud Automation:</strong></p>
+            <ul>
+                <li><span class="highlight">Led end-to-end Kubernetes migration</span> for Production and Test2 environments, onboarding 50+ microservices to clusters scaling up to 100+ worker nodes with 99.99% uptime.</li>
+                <li>Automated K8s Master/Node provisioning via Ansible playbooks, enabling repeatable, auditable cluster bootstrapping with zero manual intervention.</li>
+                <li>Designed multi-stage environment strategy evaluating ConfigServer vs ConfigMap trade-offs, standardising configuration management across 4+ environments.</li>
+                <li>Implemented network-level stage-to-production call blocking to prevent cross-environment data leakage — a critical compliance requirement.</li>
+                <li><span class="highlight">Engineered enterprise-wide Istio (Ambient Mesh) rollout,</span> optimising iptables routing and eliminating redundant Nginx hops, reducing service-to-service latency by 25%.</li>
+            </ul>
+
+            <p><strong>Security & DevSecOps:</strong></p>
+            <ul>
+                <li>Built <span class="highlight">custom Kubernetes Admission Controller</span> preventing zero-replica deployments in production — eliminating an entire class of outages.</li>
+                <li>Integrated Trivy into Jenkins CI pipelines, achieving 100% automated container image vulnerability scanning pre-deployment.</li>
+                <li>Designed and rolled out team-scoped RBAC onboarding framework, enabling self-service access control without cluster-admin involvement.</li>
+                <li>Hardened base images and enforced pre-commit standards via Husky hooks, shifting security left into the developer workflow.</li>
+            </ul>
+
+            <p><strong>Monitoring & Observability:</strong></p>
+            <ul>
+                <li>Built team-scoped Prometheus + Grafana dashboards for error rates, uptime, resource utilisation, and CPU throttling — enabling self-service debugging.</li>
+                <li>Deployed centralised monitoring and alerting stack, reducing mean-time-to-detect (MTTD) for production incidents.</li>
+                <li>Optimised route management by removing redundant Nginx service-to-service calls, cutting inter-service latency and unnecessary network hops.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <h3><span>OpsTree Solutions — DevOps Engineer</span> <span class="date-location">Jan 2020 – Apr 2021</span></h3>
+            <ul>
+                <li><span class="highlight">Engineered dynamic Kubernetes auto-scaling (HPA/VPA),</span> reducing monthly cloud infrastructure costs by 30% while supporting 3x traffic spikes during peak transaction windows.</li>
+                <li>Fine-tuned HAProxy load balancing for high-traffic workloads and validated system resilience through structured performance testing.</li>
+                <li>Automated CI/CD pipelines via Jenkins for Kafka topic provisioning and zero-downtime rolling secret updates, accelerating release velocity by 40%.</li>
+                <li>Designed and executed quarterly Disaster Recovery (DR) drills, validating RPO/RTO targets across multi-region setups.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <h3><span>HCL Technologies — Site Reliability Engineer (SRE)</span> <span class="date-location">Nov 2017 – Jan 2020</span></h3>
+            <ul>
+                <li>Bootstrapped production Kubernetes clusters from bare metal on IBM Cloud Private (ICP), supporting mission-critical enterprise applications with 99.9% SLA.</li>
+                <li>Designed Golden AMI CI/CD pipelines using Terraform and Packer, enforcing immutable infrastructure practices and reducing deployment inconsistencies.</li>
+                <li>Built Python-based automation framework for microservices deployment and health monitoring, cutting manual setup time by over 60%.</li>
+                <li>Established incident response runbooks and on-call processes, measurably reducing Mean Time To Recovery (MTTR).</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <div class="job">
+            <h3><span>B.Tech — Computer Science Engineering</span> <span class="date-location">2013 – 2017</span></h3>
+            <p>ABES Engineering College</p>
+        </div>
+    </section>
+
+</body>
+</html>
