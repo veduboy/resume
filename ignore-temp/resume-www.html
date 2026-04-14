@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prakhar Kashyap - Resume</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.5;
+            color: #333;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #fff;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+            color: #1a1a1a;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        h2 {
+            font-size: 18px;
+            color: #2c3e50;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 5px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #1a1a1a;
+            display: flex;
+            justify-content: space-between;
+        }
+        .contact-info {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .contact-info span {
+            margin-right: 15px;
+        }
+        p {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        ul {
+            margin-top: 0;
+            padding-left: 20px;
+            font-size: 14px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+            font-size: 14px;
+        }
+        .skills-category {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .date-location {
+            font-weight: normal;
+            color: #666;
+        }
+        .client-info {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        .highlight {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Prakhar Kashyap</h1>
+        <div class="contact-info">
+            <span>Email: prakharkashyap.job@gmail.com</span>
+            <span>Phone: +91-**********</span>
+        </div>
+    </header>
+
+    <section>
+        <h2>Professional Summary</h2>
+        <p>Experienced DevOps & Platform Engineering Consultant with 8+ years of expertise in architecting, automating, and optimizing IT infrastructure for large-scale enterprise environments. Specialized in high-availability Kubernetes deployments, cost-optimized Cloud Infrastructure, and advanced DevSecOps. Deep technical proficiency in Istio service mesh implementation and engineering secure, local LLM/AI integrations. Proven track record of enhancing system resilience, slashing deployment lifecycles, and delivering autonomous operational tooling for global clients.</p>
+    </section>
+
+    <section>
+        <h2>Skills & Technologies</h2>
+        <div class="skills-grid">
+            <div><span class="skills-category">Orchestration & Containerization:</span> Kubernetes (K8s), Helm, Docker, Vagrant, Istio (Ambient Mesh)</div>
+            <div><span class="skills-category">AI & Modern Tooling:</span> Ollama (Local LLMs), RAG Architectures, Autonomous AI Agents, LangChain</div>
+            <div><span class="skills-category">Infrastructure & Cloud:</span> IBM Cloud, Pivotal Cloud Foundry, Terraform, Ansible, SaltStack</div>
+            <div><span class="skills-category">Version Control & CI/CD:</span> Git, GitHub, Bitbucket, GitLab CI/CD, Jenkins</div>
+            <div><span class="skills-category">Security & DevSecOps:</span> RBAC, Trivy, Admission Controllers, Service Mesh Security</div>
+            <div><span class="skills-category">Monitoring & Logging:</span> Prometheus, ELK Stack, LogDNA, New Relic, Dynatrace, Datadog</div>
+            <div><span class="skills-category">Scripting & Automation:</span> Bash, Python, Groovy</div>
+            <div><span class="skills-category">Database & Streaming:</span> MongoDB, Kafka, PostgreSQL</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Consulting & Work Experience</h2>
+
+        <div class="job">
+            <h3><span>Nagarro - Senior DevOps Consultant</span> <span class="date-location">05/2021 - Present</span></h3>
+            
+            <p><strong>AI Integration & DevSecOps (High-Impact Area):</strong></p>
+            <ul>
+                <li><span class="highlight">Architected a secure, air-gapped enterprise AI platform</span> using Ollama and RAG architectures, maintaining strict data compliance while reducing internal documentation search time by over 50%.</li>
+                <li><span class="highlight">Developed "kagent," a proprietary autonomous AI agent</span> for incident triage, successfully automating log analysis and reducing Mean Time To Resolution (MTTR) for critical P1 incidents by 35%.</li>
+                <li>Enforced robust production stability by engineering custom Kubernetes Admission Controllers (preventing zero-replica deployments) and integrating Trivy into Jenkins, achieving 100% automated vulnerability scanning pre-deployment.</li>
+            </ul>
+
+            <p><strong>Infrastructure Architecture & Scale:</strong></p>
+            <ul>
+                <li><span class="highlight">Spearheaded the migration of 50+ microservices</span> to Kubernetes across Production and Staging, managing clusters scaling up to 100+ worker nodes and guaranteeing 99.99% uptime with zero-downtime transitions.</li>
+                <li><span class="highlight">Engineered the enterprise-wide rollout of Istio (Ambient Mesh)</span> from the ground up. Optimized complex iptables routing and eliminated redundant Nginx hops, resulting in a 25% reduction in service-to-service network latency.</li>
+                <li>Standardized rigorous performance testing (PT) pipelines to validate infrastructure resilience, ensuring seamless handling of peak loads exceeding 10,000+ RPS.</li>
+                <li>Managed highly secure, scalable IoT containerized infrastructure for the Siemens Client engagement, utilizing Terraform and CloudFormation for rapid, repeatable IaC deployments.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <h3><span>OpsTree Solutions - DevOps Engineer</span> <span class="date-location">01/2020 - 04/2021</span></h3>
+            <div class="client-info">@PaytmBank</div>
+            <ul>
+                <li><span class="highlight">Engineered dynamic Kubernetes auto-scaling (HPA/VPA),</span> reducing monthly cloud infrastructure costs by 30% while seamlessly supporting 3x traffic spikes during critical financial transaction windows.</li>
+                <li>Automated CI/CD pipelines via Jenkins for dynamic Kafka topic provisioning and zero-downtime rolling secret updates, accelerating developer release velocity by 40%.</li>
+                <li>Architected fault-tolerant performance testing environments and configured HAProxy load balancing to validate system resilience prior to major production releases.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <h3><span>HCL Technologies - Site Reliability Engineer (SRE)</span> <span class="date-location">11/2017 - 01/2020</span></h3>
+            <ul>
+                <li>Provisioned and managed high-availability on-premises Kubernetes and IBM Cloud Private (ICP) clusters, supporting mission-critical enterprise applications with a 99.9% SLA.</li>
+                <li>Designed Golden AMI CI/CD pipelines utilizing Terraform and Packer, enforcing immutable infrastructure practices and drastically reducing deployment inconsistencies.</li>
+                <li>Automated VM provisioning and complex DB2 silent installations, cutting manual infrastructure setup time by over 60%.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <div class="job">
+            <h3><span>B.Tech - Computer Science Engineering</span> <span class="date-location">2013 - 2017</span></h3>
+            <p>ABES Engineering College</p>
+        </div>
+    </section>
+
+</body>
+</html>

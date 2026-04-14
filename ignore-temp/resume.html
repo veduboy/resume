@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prakhar Kashyap - Resume</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.5;
+            color: #333;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #fff;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+            color: #1a1a1a;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        h2 {
+            font-size: 18px;
+            color: #2c3e50;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 5px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #1a1a1a;
+            display: flex;
+            justify-content: space-between;
+        }
+        .contact-info {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .contact-info span {
+            margin-right: 15px;
+        }
+        p {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        ul {
+            margin-top: 0;
+            padding-left: 20px;
+            font-size: 14px;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+            font-size: 14px;
+        }
+        .skills-category {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .date-location {
+            font-weight: normal;
+            color: #666;
+        }
+        .client-info {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Prakhar Kashyap</h1>
+        <div class="contact-info">
+            <span>Email: prakharkashyap.job@gmail.com</span>
+            <span>Phone: +91-**********</span>
+        </div>
+    </header>
+
+    <section>
+        <h2>Professional Summary</h2>
+        <p>Experienced DevOps & Platform Engineering Consultant with 8+ years of expertise in architecting, automating, and optimizing IT infrastructure for large-scale environments. Specialized in Kubernetes, Cloud Infrastructure, and DevSecOps with a strong background in container orchestration, Istio service mesh implementation, and local LLM/AI integrations. Proven track record of enhancing system reliability, slashing deployment times, and delivering cost-optimized, secure cloud architectures for global enterprise clients.</p>
+    </section>
+
+    <section>
+        <h2>Skills & Technologies</h2>
+        <div class="skills-grid">
+            <div><span class="skills-category">Orchestration & Containerization:</span> Kubernetes (K8s), Helm, Docker, Vagrant, Istio</div>
+            <div><span class="skills-category">Version Control & CI/CD:</span> Git, GitHub, Bitbucket, GitLab CI/CD, Jenkins</div>
+            <div><span class="skills-category">Infrastructure & Cloud:</span> IBM Cloud, Pivotal Cloud Foundry, Terraform, Ansible, SaltStack</div>
+            <div><span class="skills-category">Monitoring & Logging:</span> Prometheus, ELK Stack, LogDNA, New Relic, Dynatrace, Datadog</div>
+            <div><span class="skills-category">Security & DevSecOps:</span> RBAC, Trivy, Admission Controllers, Service Mesh</div>
+            <div><span class="skills-category">Scripting & Automation:</span> Bash, Python, Groovy</div>
+            <div><span class="skills-category">AI & Modern Tooling:</span> Ollama (Local LLMs), RAG Architectures, Autonomous Agents</div>
+            <div><span class="skills-category">Database & Streaming:</span> MongoDB, Kafka, PostgreSQL</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Consulting & Work Experience</h2>
+
+        <div class="job">
+            <h3><span>Nagarro - Senior DevOps Consultant</span> <span class="date-location">05/2021 - Present</span></h3>
+            
+            <p><strong>Infrastructure Architecture & Modernization:</strong></p>
+            <ul>
+                <li>Architected and led Kubernetes cluster migration and onboarding for Production and Test2 environments, ensuring zero-downtime transitions.</li>
+                <li>Engineered the end-to-end implementation of Istio (including Ambient Mesh) from the ground up. Executed comprehensive POCs comparing Linkerd and Consul, successfully rolling out the chosen architecture using advanced iptables routing.</li>
+                <li>Formalized rigorous performance testing (PT) protocols to validate infrastructure configurations, providing stakeholders with quantifiable reliability metrics for scaling production workloads.</li>
+                <li>Managed complex IoT-based containerized infrastructure leveraging Terraform and CloudFormation for the Siemens Client engagement.</li>
+            </ul>
+            <p><strong>AI, Security & DevSecOps:</strong></p>
+            <ul>
+                <li>Designed and deployed a secure, air-gapped LLM infrastructure using Ollama to guarantee data privacy while implementing a RAG system for internal documentation search.</li>
+                <li>Engineered "kagent," an autonomous AI bot that streamlined and automated incident response workflows, significantly reducing mean time to resolution (MTTR).</li>
+                <li>Enforced production stability by writing custom Admission Controllers (e.g., preventing zero-replica deployments) and integrating Trivy into Jenkins for automated vulnerability scanning.</li>
+            </ul>
+            <p><strong>Observability & Automation:</strong></p>
+            <ul>
+                <li>Deployed centralized Prometheus monitoring and logging pipelines (Siemens Client) to track error budgets, resource usage, and system throttling.</li>
+                <li>Optimized network traffic and reduced latency by eliminating redundant Nginx service-to-service hops.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <h3><span>OpsTree Solutions - DevOps Engineer</span> <span class="date-location">01/2020 - 04/2021</span></h3>
+            <div class="client-info">@PaytmBank</div>
+            <ul>
+                <li>Designed Kubernetes cluster auto-scaling rules resulting in highly cost-optimized cloud resource utilization.</li>
+                <li>Architected performance testing infrastructure to validate resilience prior to critical production releases.</li>
+                <li>Automated Jenkins pipelines for dynamic Kafka topic creation and zero-downtime rolling secret updates.</li>
+                <li>Configured HAProxy load balancing and actively supported Disaster Recovery (DR) drills.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <h3><span>HCL Technologies - SRE</span> <span class="date-location">11/2017 - 01/2020</span></h3>
+            <ul>
+                <li>Deployed and managed on-premises Kubernetes clusters and IBM Cloud Private (ICP) environments for enterprise applications.</li>
+                <li>Automated VM provisioning and DB2 silent installations, cutting manual setup time significantly.</li>
+                <li>Engineered Golden AMI CI/CD pipelines utilizing Terraform and Packer for immutable infrastructure deployments.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <div class="job">
+            <h3><span>B.Tech - Computer Science Engineering</span> <span class="date-location">2013 - 2017</span></h3>
+            <p>ABES Engineering College</p>
+        </div>
+    </section>
+
+</body>
+</html>
