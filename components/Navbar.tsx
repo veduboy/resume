@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { Linkedin } from "lucide-react";
 
 const links = ["Services", "Skills", "Experience", "Contact"];
 
@@ -47,6 +48,15 @@ export default function Navbar() {
 
                 {/* Right side */}
                 <div className="flex items-center gap-3">
+                    <a
+                        href="https://www.linkedin.com/in/vedanshpachori/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hidden sm:flex items-center text-slate-400 hover:text-[#0077b5] transition-colors"
+                        aria-label="LinkedIn"
+                    >
+                        <Linkedin className="w-5 h-5" />
+                    </a>
                     <div className="hidden sm:flex items-center gap-2 text-xs font-semibold text-emerald-400 bg-emerald-400/10 border border-emerald-400/20 px-3 py-1.5 rounded-full">
                         <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                         Available for contracts

@@ -1,12 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Globe, Clock, Zap, ShieldCheck } from "lucide-react";
+import { Mail, Globe, Clock, Zap, ShieldCheck, Linkedin } from "lucide-react";
 
 const trust = [
     { icon: Zap,          label: "Immediate availability",  sub: "Can start this week" },
     { icon: Clock,        label: "Timezone flexible",       sub: "CET · EST · GST overlap" },
-    { icon: Globe,        label: "Fully remote",            sub: "EU · US · UAE" },
+    { icon: Globe,        label: "Fully remote",            sub: "US · UK · EU · UAE" },
     { icon: ShieldCheck,  label: "Production-proven",       sub: "8+ years, 3 companies" },
 ];
 
@@ -55,13 +55,22 @@ export default function Contact() {
                                 <span className="group-hover:translate-x-1 transition-transform">→</span>
                             </a>
                             <a
-                                href="https://www.iamvedansh.com"
+                                href="https://www.linkedin.com/in/vedanshpachori/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-3 bg-[#0077b5] hover:bg-[#0091d6] text-white font-bold px-8 py-4 rounded-xl transition-all hover:scale-105 shadow-lg shadow-blue-900/30 text-base"
+                            >
+                                <Linkedin className="w-5 h-5" />
+                                LinkedIn
+                            </a>
+                            <a
+                                href="https://veduboy.github.io/resume/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-3 border border-slate-600 hover:border-emerald-500/50 text-slate-300 hover:text-emerald-400 font-semibold px-8 py-4 rounded-xl transition-all text-base"
                             >
                                 <Globe className="w-5 h-5" />
-                                iamvedansh.com
+                                Portfolio
                             </a>
                         </div>
 

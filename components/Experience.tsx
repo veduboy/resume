@@ -6,52 +6,54 @@ import { Calendar, Briefcase } from "lucide-react";
 const experiences = [
     {
         company: "Nagarro",
-        role: "Senior DevOps Engineer",
-        period: "2021 – Present",
-        focus: "Infrastructure Automation · DevSecOps · Observability",
+        role: "Senior DevOps Consultant",
+        period: "May 2021 – Present",
+        focus: "AI Platform · Kubernetes at Scale · Istio Ambient Mesh · DevSecOps",
         bullets: {
-            "Infrastructure & Cloud Automation": [
-                "Architected and led end-to-end Kubernetes migration for Production and Test2 — eliminating manual provisioning and reducing deployment lead time significantly.",
-                "Automated K8s Master/Node setup via Ansible playbooks, enabling repeatable, auditable cluster bootstrapping with zero manual intervention.",
-                "Designed multi-stage environment strategy evaluating ConfigServer vs ConfigMap trade-offs, standardising configuration management across 4+ environments.",
-                "Implemented network-level stage-to-production call blocking, preventing accidental cross-environment data leakage — a critical compliance requirement.",
+            "AI Platform & Autonomous Agent Engineering": [
+                "Architected comprehensive local LLM orchestration pipelines using Ollama, NemoClaw, and OpenClaw, advancing organization-wide autonomous AI capabilities while preserving strict data sovereignty.",
+                "Engineered advanced AI agent workflows leveraging MCP and Claude API, with secure model lifecycle management via Hugging Face.",
+                "Built a secure, air-gapped enterprise AI platform on Ollama + RAG, reducing internal documentation search time by 50%+ while meeting enterprise data-compliance requirements.",
+                'Developed "kagent", a proprietary autonomous AI agent for incident triage and log analysis, reducing MTTR for critical P1 incidents by 35%.',
             ],
-            "Security & DevSecOps": [
-                "Engineered custom Kubernetes Admission Controller that prevents zero-replica deployments in production — eliminating an entire class of outages.",
-                "Integrated Trivy container scanning into Jenkins pipelines, catching critical CVEs before images reach any cluster.",
-                "Designed and rolled out team-scoped RBAC onboarding framework, enabling self-service access control without cluster-admin involvement.",
-                "Hardened base images and enforced pre-commit standards via Husky hooks — shifting security left into the developer workflow.",
+            "Kubernetes Platform, Networking & Observability": [
+                "Spearheaded migration of 50+ microservices to Kubernetes across Production and Staging, operating clusters of 100+ worker nodes with 99.99% uptime and zero-downtime cutovers.",
+                "Led enterprise-wide rollout of Istio Ambient Mesh from the ground up; optimized iptables routing and eliminated redundant Nginx hops, cutting service-to-service latency by 25%.",
+                "Conducted comparative architecture analysis of Calico, Cilium, and Flannel CNIs to design optimized, secure cluster networking aligned with workload and security requirements.",
+                "Implemented Node Problem Detector across large-scale clusters for proactive health monitoring and automated remediation of node-level kernel and hardware faults.",
+                "Standardized performance-testing pipelines validating infrastructure resilience under peak loads of 10,000+ RPS.",
             ],
-            "Monitoring & Observability": [
-                "Built team-scoped Prometheus + Grafana dashboards for error rates, uptime, resource utilisation, and CPU throttling — enabling self-service debugging.",
-                "Deployed centralised monitoring and alerting stack, reducing mean-time-to-detect (MTTD) for production incidents.",
-                "Eliminated redundant Nginx service-to-service routing calls, cutting inter-service latency and reducing unnecessary network hops.",
+            "Distributed Storage, DR & DevSecOps": [
+                "Engineered a highly available distributed storage architecture using MicroCeph on Rocky Linux 9, fully integrated with Velero to guarantee robust Kubernetes backup and disaster recovery.",
+                "Enforced production stability via custom Kubernetes Admission Controllers (preventing zero-replica deployments) and integrated Trivy into Jenkins for 100% automated pre-deployment vulnerability scanning.",
+                "Managed secure, scalable IoT containerized infrastructure for the Siemens engagement using Terraform and CloudFormation for repeatable IaC deployments.",
+                "Operated multi-cloud infrastructure across AWS (EC2, EKS, ECR, RDS) and GCP (GKE, Cloud Armor, Cloud Logging, IAM), applying Terraform modules for consistent cross-cloud provisioning and security hardening.",
             ],
         },
     },
     {
         company: "OpsTree Solutions",
-        role: "DevOps Engineer",
+        role: "DevOps Engineer (Onsite: Paytm Bank)",
         period: "Jan 2020 – Apr 2021",
-        focus: "Kubernetes Scaling · High Availability · Automation",
+        focus: "Kubernetes Scaling · CI/CD Automation · High Availability",
         bullets: {
             "Kubernetes & Infrastructure": [
-                "Implemented horizontal pod autoscaling and fine-tuned HAProxy load balancing for traffic spikes exceeding 10x baseline load.",
-                "Built Jenkins-driven automation for Kafka topic provisioning and consumer group lifecycle — reducing ops toil from hours to minutes.",
-                "Designed and executed quarterly Disaster Recovery drills, validating RPO/RTO targets across multi-region infrastructure.",
+                "Engineered dynamic Kubernetes auto-scaling (HPA/VPA), reducing monthly cloud infrastructure cost by 30% while seamlessly handling 3x traffic spikes during critical financial transaction windows.",
+                "Automated Jenkins CI/CD pipelines for dynamic Kafka topic provisioning and zero-downtime rolling secret updates, accelerating release velocity by 40%.",
+                "Architected fault-tolerant performance-testing environments and configured HAProxy load balancing to validate system resilience prior to major production releases.",
             ],
         },
     },
     {
         company: "HCL Technologies",
-        role: "SRE Engineer",
+        role: "Site Reliability Engineer (SRE)",
         period: "Nov 2017 – Jan 2020",
-        focus: "Platform Engineering · Incident Response · Cloud Migration",
+        focus: "Platform Engineering · High Availability · Immutable Infrastructure",
         bullets: {
-            "SRE & Cloud": [
-                "Bootstrapped production Kubernetes clusters from bare metal on IBM Cloud Private — full lifecycle from cluster initialisation to workload onboarding.",
-                "Built Python-based automation framework for microservices deployment and health monitoring, reducing manual deployment effort by ~70%.",
-                "Established incident response runbooks and on-call processes, measurably reducing Mean Time To Recovery (MTTR) across production services.",
+            "SRE & Platform Engineering": [
+                "Provisioned and operated high-availability on-premises Kubernetes and IBM Cloud Private (ICP) clusters supporting mission-critical enterprise workloads at 99.9% SLA.",
+                "Designed Golden AMI CI/CD pipelines using Terraform and Packer, enforcing immutable-infrastructure practices and eliminating deployment drift.",
+                "Automated VM provisioning and complex DB2 silent installations, reducing manual infrastructure setup time by over 60%.",
             ],
         },
     },

@@ -227,7 +227,7 @@ export default function Hero() {
 
                         {/* Floating tech badges */}
                         <div className="mt-6 flex flex-wrap gap-2 justify-center">
-                            {["Kubernetes", "Terraform", "AWS", "Azure", "GCP", "Jenkins", "Prometheus", "Trivy"].map((t) => (
+                            {["Kubernetes", "Istio Ambient", "Terraform", "AWS", "GCP", "Prometheus", "Trivy", "Ollama"].map((t) => (
                                 <span key={t} className="text-xs font-mono text-slate-500 bg-slate-800/60 border border-slate-700/50 px-3 py-1 rounded-full">
                                     {t}
                                 </span>

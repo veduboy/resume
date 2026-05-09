@@ -164,25 +164,71 @@ function ObservabilityBg() {
 }
 
 /* ─────────────────────────────────────────────
-   Languages – floating code particles
+   AI – neural net nodes / synapses
 ───────────────────────────────────────────── */
-function LanguagesBg() {
+function AIBg() {
     const [tick, setTick] = useState(0);
     useAnimationFrame((t) => setTick(t));
 
-    const snippets = ["if", "def", "[]", "#!/", "fn", "{}", "=>", "&&", "||", "for"];
+    const nodes = [
+        { x: 15, y: 50 }, { x: 35, y: 25 }, { x: 35, y: 50 }, { x: 35, y: 75 },
+        { x: 60, y: 35 }, { x: 60, y: 65 }, { x: 82, y: 50 },
+    ];
+    const edges = [
+        [0,1],[0,2],[0,3],[1,4],[1,5],[2,4],[2,5],[3,4],[3,5],[4,6],[5,6],
+    ];
+
     return (
         <svg className="absolute inset-0 w-full h-full opacity-20" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
-            {snippets.map((s, i) => {
-                const x = ((i * 17 + 5) % 90) + 5;
-                const baseY = ((i * 13 + 10) % 80) + 10;
-                const y = baseY + Math.sin(tick / 700 + i * 1.5) * 5;
-                const opacity = 0.3 + Math.sin(tick / 500 + i) * 0.2;
+            {edges.map(([a, b], i) => {
+                const pulse = Math.sin(tick / 500 + i * 0.7) * 0.5 + 0.5;
                 return (
-                    <text key={i} x={x} y={y} fontSize="6" fill="#eab308"
-                        fillOpacity={opacity} fontFamily="monospace">{s}</text>
+                    <line key={i}
+                        x1={nodes[a].x} y1={nodes[a].y} x2={nodes[b].x} y2={nodes[b].y}
+                        stroke="#f59e0b" strokeWidth="0.7"
+                        strokeOpacity={0.2 + pulse * 0.5}
+                        strokeDasharray="2 2"
+                        strokeDashoffset={-tick / 80}
+                    />
                 );
             })}
+            {nodes.map((n, i) => {
+                const pulse = Math.sin(tick / 450 + i * 1.3) * 0.5 + 0.5;
+                return (
+                    <g key={i}>
+                        <circle cx={n.x} cy={n.y} r={3 + pulse * 1.2} fill="#f59e0b" fillOpacity={0.1} />
+                        <circle cx={n.x} cy={n.y} r={1.8} fill="#fbbf24" fillOpacity={0.5 + pulse * 0.4} />
+                    </g>
+                );
+            })}
+        </svg>
+    );
+}
+
+/* ─────────────────────────────────────────────
+   Security – shield pulse / radar sweep
+───────────────────────────────────────────── */
+function SecurityBg() {
+    const [tick, setTick] = useState(0);
+    useAnimationFrame((t) => setTick(t));
+
+    const angle = (tick / 1200) % (Math.PI * 2);
+    const sweepX = 50 + Math.cos(angle) * 35;
+    const sweepY = 50 + Math.sin(angle) * 35;
+
+    return (
+        <svg className="absolute inset-0 w-full h-full opacity-20" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+            {[35, 25, 15].map((r, i) => (
+                <circle key={i} cx="50" cy="50" r={r}
+                    fill="none" stroke="#f43f5e" strokeWidth="0.6"
+                    strokeOpacity={0.2 + i * 0.1} strokeDasharray="3 2" />
+            ))}
+            <line x1="50" y1="50" x2={sweepX} y2={sweepY}
+                stroke="#f43f5e" strokeWidth="1" strokeOpacity="0.5" />
+            <circle cx={sweepX} cy={sweepY} r="2" fill="#f43f5e" fillOpacity="0.7" />
+            {[[50,15],[50,85],[15,50],[85,50]].map(([x,y],i) => (
+                <circle key={i} cx={x} cy={y} r="1.5" fill="#fb7185" fillOpacity={0.3 + Math.sin(tick/400 + i)*0.2} />
+            ))}
         </svg>
     );
 }
@@ -192,25 +238,25 @@ function LanguagesBg() {
 ───────────────────────────────────────────── */
 const skills = [
     {
-        category: "Orchestration",
+        category: "Orchestration & Service Mesh",
         icon: "⎈",
-        items: ["Kubernetes", "Helm", "Istio", "Docker", "Vagrant", "KVM"],
+        items: ["Kubernetes (HPA/VPA)", "Helm", "Istio Ambient Mesh", "Docker", "Vagrant", "Node Problem Detector"],
         color: "border-blue-500/30 text-blue-400",
         tagColor: "bg-blue-950/60 border-blue-700/40 text-blue-300",
         Bg: OrchestrationBg,
     },
     {
-        category: "Cloud",
+        category: "Cloud & IaC",
         icon: "☁",
-        items: ["AWS (IoT Core, SiteWise)", "Azure", "GCP", "IBM Cloud", "Pivotal CF"],
+        items: ["AWS", "GCP", "IBM Cloud", "Terraform", "Packer", "CloudFormation", "Ansible", "SaltStack"],
         color: "border-orange-500/30 text-orange-400",
         tagColor: "bg-orange-950/60 border-orange-700/40 text-orange-300",
         Bg: CloudBg,
     },
     {
-        category: "CI/CD",
+        category: "CI/CD & VCS",
         icon: "⚙",
-        items: ["Jenkins", "GitLab CI/CD", "Ansible", "SaltStack"],
+        items: ["Jenkins", "GitLab CI/CD", "GitHub Actions", "Bitbucket", "Git", "Groovy"],
         color: "border-green-500/30 text-green-400",
         tagColor: "bg-green-950/60 border-green-700/40 text-green-300",
         Bg: CICDBg,
@@ -218,18 +264,26 @@ const skills = [
     {
         category: "Observability",
         icon: "◉",
-        items: ["ELK Stack", "Prometheus", "Grafana", "Datadog", "New Relic"],
+        items: ["Prometheus", "Grafana", "ELK Stack", "LogDNA", "New Relic", "Dynatrace", "Datadog"],
         color: "border-purple-500/30 text-purple-400",
         tagColor: "bg-purple-950/60 border-purple-700/40 text-purple-300",
         Bg: ObservabilityBg,
     },
     {
-        category: "Languages",
-        icon: "</>",
-        items: ["Python", "Bash/Shell", "Groovy", "Core Java"],
-        color: "border-yellow-500/30 text-yellow-400",
-        tagColor: "bg-yellow-950/60 border-yellow-700/40 text-yellow-300",
-        Bg: LanguagesBg,
+        category: "AI / LLM Platform",
+        icon: "◈",
+        items: ["Ollama", "NemoClaw", "OpenClaw", "RAG", "LangChain", "Hugging Face", "MCP", "Claude API"],
+        color: "border-amber-500/30 text-amber-400",
+        tagColor: "bg-amber-950/60 border-amber-700/40 text-amber-300",
+        Bg: AIBg,
+    },
+    {
+        category: "DevSecOps & Networking",
+        icon: "⬡",
+        items: ["Trivy", "RBAC", "Admission Controllers", "Calico", "Cilium", "Flannel", "MicroCeph", "Velero"],
+        color: "border-rose-500/30 text-rose-400",
+        tagColor: "bg-rose-950/60 border-rose-700/40 text-rose-300",
+        Bg: SecurityBg,
     },
 ];
 
