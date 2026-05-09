@@ -1,36 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Vedansh Pachori — Portfolio
 
-## Getting Started
+Personal portfolio site built with Next.js 14, Tailwind CSS, and Framer Motion.
 
-First, run the development server:
+**Live URL:** https://veduboy.github.io/resume
+
+---
+
+## Quick Start
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000/resume
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deploy
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Option 1 — Automatic (recommended)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Push to `main`. GitHub Actions builds and publishes to GitHub Pages automatically.
 
-## Learn More
+```bash
+git add -A
+git commit -m "update site"
+git push origin main
+```
 
-To learn more about Next.js, take a look at the following resources:
+CI workflow: [.github/workflows/deploy.yml](.github/workflows/deploy.yml)  
+Status: https://github.com/veduboy/resume/actions
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Option 2 — One-command script
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+./deploy.sh "your commit message"
+```
 
-## Deploy on Vercel
+### Option 3 — First-time GitHub Pages setup
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Go to **Settings → Pages** in the repo
+2. Set **Source** to `Deploy from a branch`
+3. Set **Branch** to `gh-pages` / `/ (root)`
+4. Save — site appears at `https://veduboy.github.io/resume` within ~60 seconds
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Build
+
+```bash
+npm run build      # outputs to ./out/ (fully static, no server needed)
+```
+
+---
+
+## Project Structure
+
+```
+app/
+  layout.tsx        — root layout, fonts, metadata
+  page.tsx          — page composition
+components/
+  Hero.tsx          — name, role rotator, terminal animation, CTAs
+  Stats.tsx         — animated counters (8+ yrs, 50+ microservices …)
+  Skills.tsx        — 6 skill cards with live SVG backgrounds
+  Experience.tsx    — timeline: Nagarro · OpsTree · HCL
+  Services.tsx      — contract service offerings
+  Contact.tsx       — contact CTA + trust signals
+  Navbar.tsx        — sticky top nav
+  Footer.tsx
+  Avatar.tsx
+public/
+  Vedansh-Pachori-Resume.html   — downloadable CV (linked from Hero)
+.github/workflows/
+  deploy.yml        — GitHub Actions: build → gh-pages on push to main
+```
+
+---
+
+## Customisation Reference
+
+| What to change | File |
+|---|---|
+| Name / bio / CTAs | `components/Hero.tsx` |
+| Skill categories & tags | `components/Skills.tsx` → `skills` array |
+| Work history & bullets | `components/Experience.tsx` → `experiences` array |
+| Stat counters | `components/Stats.tsx` → `stats` array |
+| Service cards | `components/Services.tsx` → `services` array |
+| Contact email / links | `components/Contact.tsx` |
+| Site base path | `next.config.mjs` → `basePath` |
+
+---
+
+## Tech Stack
+
+- **Next.js 14** — static export (`output: "export"`)
+- **Tailwind CSS 3** — utility-first styling
+- **Framer Motion** — scroll animations + animated SVG card backgrounds
+- **Lucide React** — icons
+- **GitHub Actions + peaceiris/actions-gh-pages** — CI/CD to GitHub Pages

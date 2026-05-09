@@ -28,10 +28,10 @@ function Counter({ value, suffix = "", prefix = "" }: { value: number; suffix?: 
 }
 
 const stats = [
-    { value: 8,   suffix: "+", label: "Years Experience",     sub: "Since 2017" },
-    { value: 3,   suffix: "",  label: "Global Companies",     sub: "Nagarro · OpsTree · HCL" },
-    { value: 15,  suffix: "+", label: "Technologies",         sub: "Cloud · K8s · DevSecOps" },
-    { value: 99,  suffix: ".9%", label: "Uptime SLA",         sub: "Production grade" },
+    { value: 8,   suffix: "+",   label: "Years Experience",     sub: "Since 2017" },
+    { value: 50,  suffix: "+",   label: "Microservices Migrated", sub: "100+ worker nodes" },
+    { value: 35,  suffix: "%",   label: "MTTR Reduction",        sub: "P1 incidents via kagent" },
+    { value: 99,  suffix: ".99%", label: "Uptime Achieved",      sub: "Production clusters" },
 ];
 
 export default function Stats() {

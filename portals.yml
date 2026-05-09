@@ -1,0 +1,1021 @@
+# Portal Scanner Configuration — Customized for Vedansh Pachori
+# Profile: Senior DevOps / Platform Engineering Consultant, 8+ yrs
+# Core: Kubernetes, Istio (Ambient Mesh), Terraform, Helm, Jenkins, GitLab CI/CD
+# AI-infra edge: Ollama / RAG / LangChain / autonomous agents (kagent)
+#
+# PRIORITY: Remote / Overseas (Europe, UK, USA, UAE/Dubai) — no-visa / no-citizenship
+# Companies listed below either hire fully remote from India, or have explicit
+# "work from anywhere" / EoR (Deel / Remote.com) policies. Indian companies are
+# included as a lower-priority fallback tier (not primary target).
+#
+# Strategy (3 levels):
+#   1. Playwright → careers_url of each company (real-time, reliable)
+#   2. Greenhouse API → structured JSON (fast, Greenhouse-only)
+#   3. WebSearch with site: filters (broad discovery, may be stale)
+
+# -- Title filter --
+# At least 1 positive must match AND 0 negatives must match (case-insensitive).
+
+title_filter:
+  positive:
+    # -- Core DevOps / Platform / SRE --
+    - "DevOps"
+    - "DevSecOps"
+    - "SRE"
+    - "Site Reliability"
+    - "Platform Engineer"
+    - "Platform Engineering"
+    - "Infrastructure Engineer"
+    - "Cloud Engineer"
+    - "Cloud Infrastructure"
+    - "Cloud Architect"
+    - "Systems Engineer"
+    - "Production Engineer"
+    - "Release Engineer"
+    # -- Kubernetes / containers / service mesh --
+    - "Kubernetes"
+    - "K8s"
+    - "Container Platform"
+    - "Service Mesh"
+    - "Istio"
+    # -- CI/CD / IaC / automation --
+    - "CI/CD"
+    - "Build Engineer"
+    - "Automation Engineer"
+    - "Infrastructure Automation"
+    - "Terraform"
+    - "GitOps"
+    # -- Observability --
+    - "Observability"
+    - "Monitoring"
+    # -- AI-infra crossover (matches kagent / Ollama / RAG work) --
+    - "MLOps"
+    - "LLMOps"
+    - "AI Infrastructure"
+    - "AI Platform"
+    - "ML Platform"
+    - "AI Engineer"
+    - "LLM Engineer"
+    - "Agentic"
+  negative:
+    - "Junior"
+    - "Intern"
+    - "Trainee"
+    - "Graduate"
+    - "Associate"
+    - ".NET"
+    - "iOS"
+    - "Android"
+    - "PHP"
+    - "Ruby on Rails"
+    - "Frontend"
+    - "Front-End"
+    - "Front End"
+    - "React Developer"
+    - "Angular"
+    - "Vue"
+    - "UI Developer"
+    - "UX"
+    - "Embedded"
+    - "Firmware"
+    - "FPGA"
+    - "ASIC"
+    - "Blockchain"
+    - "Web3"
+    - "Crypto"
+    - "Salesforce Admin"
+    - "SAP "
+    - "Oracle EBS"
+    - "Mainframe"
+    - "COBOL"
+    - "Data Scientist"
+    - "ML Researcher"
+    - "Research Scientist"
+    - "Sales"
+    - "Marketing"
+    - "Recruiter"
+    # Visa / relocation-gated roles — exclude since target is remote-from-India
+    - "US Citizen"
+    - "Security Clearance"
+    - "TS/SCI"
+    - "must relocate"
+    - "onsite only"
+  seniority_boost:
+    - "Senior"
+    - "Sr."
+    - "Sr "
+    - "Staff"
+    - "Principal"
+    - "Lead"
+    - "Head"
+    - "Architect"
+    - "Director"
+
+# -- Search queries --
+# WebSearch queries, filtered by site: to specific portals.
+# Focus: remote-global, EU/UK, USA-remote, UAE/Dubai.
+
+search_queries:
+
+  # ============================================================
+  # REMOTE-GLOBAL — true "work from anywhere" boards
+  # ============================================================
+  - name: Remotive — DevOps / SRE / Platform (worldwide)
+    query: 'site:remotive.com "DevOps" OR "SRE" OR "Platform Engineer" OR "Kubernetes" "worldwide" OR "anywhere" senior OR lead'
+    enabled: true
+
+  - name: RemoteOK — DevOps / SRE / Platform
+    query: 'site:remoteok.com "DevOps" OR "SRE" OR "Platform Engineer" OR "Kubernetes"'
+    enabled: true
+
+  - name: WeWorkRemotely — DevOps / SRE
+    query: 'site:weworkremotely.com "DevOps" OR "SRE" OR "Platform Engineer" OR "Kubernetes"'
+    enabled: true
+
+  - name: Himalayas — DevOps / Platform (worldwide)
+    query: 'site:himalayas.app "DevOps" OR "SRE" OR "Platform Engineer" OR "Kubernetes" "worldwide" OR "anywhere" senior OR lead'
+    enabled: true
+
+  - name: Working Nomads — DevOps / SRE
+    query: 'site:workingnomads.com "DevOps" OR "SRE" OR "Platform Engineer"'
+    enabled: true
+
+  - name: 4 Day Week — Remote DevOps / Platform
+    query: 'site:4dayweek.io "DevOps" OR "SRE" OR "Platform" remote'
+    enabled: true
+
+  - name: JustRemote — DevOps / SRE
+    query: 'site:justremote.co "DevOps" OR "SRE" OR "Platform Engineer"'
+    enabled: true
+
+  - name: AngelList/Wellfound — Remote worldwide
+    query: 'site:wellfound.com OR site:angel.co "DevOps" OR "SRE" OR "Platform Engineer" "remote" "worldwide" OR "anywhere" senior'
+    enabled: true
+
+  - name: Arc.dev — Remote DevOps / SRE (vetted, India-friendly)
+    query: 'site:arc.dev "DevOps" OR "SRE" OR "Platform Engineer" OR "Kubernetes" senior OR lead'
+    enabled: true
+
+  - name: Turing — Remote US roles for India engineers
+    query: 'site:turing.com/jobs OR site:turing.com "DevOps" OR "SRE" OR "Platform Engineer" OR "Kubernetes" senior'
+    enabled: true
+
+  - name: Jobicy — Remote DevOps / SRE worldwide
+    query: 'site:jobicy.com "DevOps" OR "SRE" OR "Platform Engineer" OR "Kubernetes"'
+    enabled: true
+
+  - name: Pangian — Remote worldwide
+    query: 'site:pangian.com "DevOps" OR "SRE" OR "Platform Engineer"'
+    enabled: true
+
+  - name: Remote.co — Remote DevOps / SRE
+    query: 'site:remote.co "DevOps" OR "SRE" OR "Platform Engineer"'
+    enabled: true
+
+  - name: JobGether — EU-first remote
+    query: 'site:jobgether.com "DevOps" OR "SRE" OR "Platform Engineer" OR "Kubernetes" senior OR lead'
+    enabled: true
+
+  - name: NoDesk — Remote DevOps / Platform
+    query: 'site:nodesk.co "DevOps" OR "SRE" OR "Platform Engineer"'
+    enabled: true
+
+  # ============================================================
+  # EUROPE / UK — remote-friendly EU/UK boards
+  # ============================================================
+  - name: EU Remote Jobs — DevOps / Platform
+    query: 'site:euremotejobs.com "DevOps" OR "SRE" OR "Platform Engineer" OR "Kubernetes"'
+    enabled: true
+
+  - name: RelocateMe — EU remote DevOps (non-visa filter)
+    query: 'site:relocate.me "DevOps" OR "SRE" OR "Platform Engineer" OR "Kubernetes" remote'
+    enabled: true
+
+  - name: LinkedIn — EU remote DevOps / SRE
+    query: 'site:linkedin.com/jobs "DevOps" OR "SRE" OR "Platform Engineer" "remote" Europe OR UK OR Germany OR Netherlands senior OR lead OR principal'
+    enabled: true
+
+  - name: Honeypot — EU tech (DE/NL)
+    query: 'site:honeypot.io "DevOps" OR "SRE" OR "Platform Engineer" remote'
+    enabled: true
+
+  - name: Otta — UK/EU DevOps (remote)
+    query: 'site:otta.com OR site:welcometothejungle.com "DevOps" OR "SRE" OR "Platform Engineer" remote UK OR Europe senior'
+    enabled: true
+
+  - name: Arbeitnow — 100% remote EU tech
+    query: 'site:arbeitnow.com "DevOps" OR "SRE" OR "Platform Engineer" OR "Kubernetes"'
+    enabled: true
+
+  - name: Welcome to the Jungle — FR/EU tech
+    query: 'site:welcometothejungle.com "DevOps" OR "SRE" OR "Platform Engineer" remote Europe senior OR lead'
+    enabled: true
+
+  - name: JustJoin.it — EU tech (Poland + remote EU)
+    query: 'site:justjoin.it "DevOps" OR "SRE" OR "Platform" OR "Kubernetes" remote senior OR lead'
+    enabled: true
+
+  - name: NoFluffJobs — CEE tech remote
+    query: 'site:nofluffjobs.com "DevOps" OR "SRE" OR "Platform Engineer" remote senior'
+    enabled: true
+
+  - name: CWJobs — UK tech
+    query: 'site:cwjobs.co.uk "DevOps" OR "SRE" OR "Platform Engineer" OR "Kubernetes" remote senior OR lead'
+    enabled: true
+
+  - name: Reed — UK tech
+    query: 'site:reed.co.uk "DevOps" OR "SRE" OR "Platform Engineer" remote senior OR lead'
+    enabled: true
+
+  - name: Hired — UK/EU/US tech (curated)
+    query: 'site:hired.com "DevOps" OR "SRE" OR "Platform Engineer" OR "Kubernetes" remote'
+    enabled: true
+
+  - name: LandingJobs — Portugal/EU remote
+    query: 'site:landing.jobs "DevOps" OR "SRE" OR "Platform Engineer" OR "Kubernetes" remote senior'
+    enabled: true
+
+  # ============================================================
+  # USA — remote-hiring US companies (no-visa required)
+  # ============================================================
+  - name: Ashby — US remote DevOps / SRE / Platform
+    query: 'site:jobs.ashbyhq.com "DevOps" OR "SRE" OR "Platform Engineer" "remote" senior OR staff OR lead'
+    enabled: true
+
+  - name: Greenhouse — US remote DevOps / SRE / Platform
+    query: 'site:boards.greenhouse.io OR site:job-boards.greenhouse.io "DevOps" OR "SRE" OR "Platform Engineer" "remote" senior OR staff OR lead'
+    enabled: true
+
+  - name: Lever — US remote DevOps / SRE / Platform
+    query: 'site:jobs.lever.co "DevOps" OR "SRE" OR "Platform Engineer" "remote" senior OR lead OR staff'
+    enabled: true
+
+  - name: Workable — US/EU remote DevOps
+    query: 'site:apply.workable.com "DevOps" OR "Kubernetes" OR "Platform Engineer" remote senior'
+    enabled: true
+
+  - name: YC Jobs — Remote DevOps / Platform / SRE
+    query: 'site:workatastartup.com "DevOps" OR "SRE" OR "Platform Engineer" OR "Kubernetes" "remote" "anywhere" OR "worldwide" senior OR lead'
+    enabled: true
+
+  - name: HN Who's Hiring — Remote DevOps / Platform
+    query: 'site:news.ycombinator.com OR site:hnrss.org "DevOps" OR "SRE" OR "Platform Engineer" OR "Kubernetes" "remote" "anywhere" OR "worldwide"'
+    enabled: true
+
+  - name: Built In — US remote DevOps / Platform
+    query: 'site:builtin.com "DevOps" OR "SRE" OR "Platform Engineer" OR "Kubernetes" remote senior OR lead'
+    enabled: true
+
+  - name: Dice — US tech remote
+    query: 'site:dice.com "DevOps" OR "SRE" OR "Platform Engineer" OR "Kubernetes" remote senior OR lead OR principal'
+    enabled: true
+
+  - name: Underdog.io — US startup tech
+    query: 'site:underdog.io "DevOps" OR "SRE" OR "Platform Engineer" remote senior'
+    enabled: true
+
+  # ============================================================
+  # UAE / Dubai / Middle East
+  # ============================================================
+  - name: LinkedIn — UAE DevOps / Platform
+    query: 'site:linkedin.com/jobs "DevOps" OR "SRE" OR "Platform Engineer" "UAE" OR "Dubai" OR "Abu Dhabi" senior OR lead'
+    enabled: true
+
+  - name: Bayt — UAE DevOps / SRE
+    query: 'site:bayt.com "DevOps" OR "SRE" OR "Platform Engineer" OR "Kubernetes" UAE OR Dubai OR Abu-Dhabi'
+    enabled: true
+
+  - name: Naukrigulf — UAE DevOps / Platform
+    query: 'site:naukrigulf.com "DevOps" OR "SRE" OR "Platform Engineer" OR "Kubernetes" Dubai OR UAE'
+    enabled: true
+
+  - name: GulfTalent — UAE DevOps
+    query: 'site:gulftalent.com "DevOps" OR "SRE" OR "Kubernetes" UAE OR Dubai senior'
+    enabled: true
+
+  - name: Monster Gulf — UAE tech
+    query: 'site:monstergulf.com "DevOps" OR "SRE" OR "Platform Engineer" OR "Kubernetes" UAE OR Dubai senior OR lead'
+    enabled: true
+
+  - name: Indeed AE — UAE tech
+    query: 'site:ae.indeed.com "DevOps" OR "SRE" OR "Platform Engineer" OR "Kubernetes" UAE OR Dubai senior OR lead'
+    enabled: true
+
+  - name: Laimoon — MENA tech
+    query: 'site:laimoon.com "DevOps" OR "SRE" OR "Platform Engineer" UAE OR Dubai senior'
+    enabled: true
+
+  - name: Dubizzle Jobs — UAE tech
+    query: 'site:dubizzle.com/jobs OR site:jobs.dubizzle.com "DevOps" OR "SRE" OR "Platform" Dubai OR UAE senior'
+    enabled: true
+
+  # ============================================================
+  # Specialized MLOps / AI-infra boards (crossover with kagent/Ollama)
+  # ============================================================
+  - name: ai-jobs.net — MLOps / AI Infra (remote)
+    query: 'site:ai-jobs.net "MLOps" OR "LLMOps" OR "AI Platform" OR "AI Infrastructure" senior OR lead remote'
+    enabled: true
+
+# -- Tracked companies --
+# Companies whose career pages are checked directly.
+# scan_method: playwright (default), websearch, greenhouse_api
+
+tracked_companies:
+
+  # ================================================================
+  # TIER 1 — TRUE REMOTE-GLOBAL (hires worldwide incl. India, no visa)
+  # ================================================================
+
+  - name: GitLab
+    careers_url: https://about.gitlab.com/jobs
+    scan_method: websearch
+    scan_query: 'site:about.gitlab.com/jobs "DevOps" OR "SRE" OR "Platform" OR "Solutions Architect" OR "Site Reliability"'
+    notes: "All-remote since day one. Hires India directly. Heavy DevOps focus."
+    enabled: true
+
+  - name: Automattic (WordPress)
+    careers_url: https://automattic.com/work-with-us
+    scan_method: websearch
+    scan_query: 'site:automattic.com/work-with-us "Systems" OR "SRE" OR "DevOps" OR "Infrastructure"'
+    notes: "Fully distributed, hires worldwide. WordPress.com, WooCommerce."
+    enabled: true
+
+  - name: Canonical (Ubuntu)
+    careers_url: https://canonical.com/careers
+    scan_method: websearch
+    scan_query: 'site:canonical.com/careers "DevOps" OR "SRE" OR "Platform" OR "Kubernetes" OR "MicroK8s"'
+    notes: "Fully remote global. Ubuntu / MicroK8s / Juju. Hires India."
+    enabled: true
+
+  - name: Docker
+    careers_url: https://www.docker.com/careers
+    scan_method: websearch
+    scan_query: 'site:docker.com/careers "Engineer" OR "SRE" OR "Platform" remote'
+    notes: "Remote-first. Hires globally."
+    enabled: true
+
+  - name: HashiCorp (IBM)
+    careers_url: https://www.hashicorp.com/jobs
+    scan_method: websearch
+    scan_query: 'site:hashicorp.com/jobs "Engineer" OR "Solutions" remote'
+    notes: "Terraform / Vault / Consul. Remote-first. IBM-acquired."
+    enabled: true
+
+  - name: Grafana Labs
+    careers_url: https://grafana.com/about/careers
+    scan_method: websearch
+    scan_query: 'site:grafana.com/about/careers "DevOps" OR "SRE" OR "Platform" OR "Solutions"'
+    notes: "Remote-first. Grafana / Loki / Tempo. Hires India."
+    enabled: true
+
+  - name: Elastic
+    careers_url: https://jobs.elastic.co
+    scan_method: websearch
+    scan_query: 'site:jobs.elastic.co "DevOps" OR "SRE" OR "Solutions"'
+    notes: "Distributed since founding. ELK creators."
+    enabled: true
+
+  - name: Chainguard
+    careers_url: https://www.chainguard.dev/careers
+    scan_method: websearch
+    scan_query: 'site:chainguard.dev/careers "Engineer" OR "Solutions" remote'
+    notes: "Secure container images. Fully remote. Matches his Trivy/DevSecOps work."
+    enabled: true
+
+  - name: Isovalent (Cisco)
+    careers_url: https://isovalent.com/careers
+    scan_method: websearch
+    scan_query: 'site:isovalent.com/careers "Engineer" OR "Solutions" remote'
+    notes: "Cilium / eBPF. Remote-global. Cisco-owned."
+    enabled: true
+
+  - name: Zapier
+    careers_url: https://jobs.ashbyhq.com/zapier
+    scan_method: websearch
+    scan_query: 'site:jobs.ashbyhq.com/zapier "DevOps" OR "SRE" OR "Platform"'
+    notes: "Fully remote. Hires worldwide."
+    enabled: true
+
+  - name: Mattermost
+    careers_url: https://mattermost.com/careers
+    scan_method: websearch
+    scan_query: 'site:mattermost.com/careers "DevOps" OR "SRE" OR "Platform"'
+    notes: "Slack-alternative. Remote-first."
+    enabled: true
+
+  - name: Gitpod
+    careers_url: https://www.gitpod.io/careers
+    scan_method: websearch
+    scan_query: 'site:gitpod.io/careers "Engineer" OR "Platform" remote'
+    notes: "Cloud dev environments. Remote-global."
+    enabled: true
+
+  - name: Percona
+    careers_url: https://www.percona.com/about/careers
+    scan_method: websearch
+    scan_query: 'site:percona.com/about/careers "DevOps" OR "SRE" OR "Database"'
+    notes: "Open-source DB services. 100% remote. Hires India."
+    enabled: true
+
+  - name: Suse (Rancher)
+    careers_url: https://jobs.suse.com
+    scan_method: websearch
+    scan_query: 'site:jobs.suse.com "DevOps" OR "Platform" OR "Kubernetes"'
+    notes: "Rancher / K8s mgmt. EU-based. Strong remote hiring."
+    enabled: true
+
+  - name: Red Hat (IBM)
+    careers_url: https://www.redhat.com/en/jobs
+    scan_method: websearch
+    scan_query: 'site:redhat.com/en/jobs "DevOps" OR "SRE" OR "Platform" OR "OpenShift" remote'
+    notes: "OpenShift / Ansible. Remote hires globally."
+    enabled: true
+
+  - name: Buffer
+    careers_url: https://buffer.com/journey
+    scan_method: websearch
+    scan_query: 'site:buffer.com/journey "Engineer" OR "DevOps" OR "Platform" remote'
+    notes: "Fully distributed. Hires worldwide."
+    enabled: true
+
+  - name: Doist
+    careers_url: https://doist.com/careers
+    scan_method: websearch
+    scan_query: 'site:doist.com/careers "DevOps" OR "Backend" OR "Platform"'
+    notes: "Todoist / Twist. Fully remote worldwide."
+    enabled: true
+
+  - name: Hotjar (Contentsquare)
+    careers_url: https://careers.hotjar.com
+    scan_method: websearch
+    scan_query: 'site:careers.hotjar.com "DevOps" OR "SRE" OR "Platform"'
+    notes: "Fully distributed. EU base."
+    enabled: true
+
+  - name: DuckDuckGo
+    careers_url: https://duckduckgo.com/hiring
+    scan_method: websearch
+    scan_query: 'site:duckduckgo.com/hiring "Engineer" OR "DevOps" OR "Platform"'
+    notes: "Remote-global privacy-focused search."
+    enabled: true
+
+  # ================================================================
+  # TIER 2 — EUROPE / UK / IRELAND (remote-hiring or EU-remote)
+  # ================================================================
+
+  - name: Booking.com
+    careers_url: https://jobs.booking.com
+    scan_method: websearch
+    scan_query: 'site:jobs.booking.com "DevOps" OR "SRE" OR "Platform" OR "Kubernetes" remote OR Netherlands'
+    notes: "Amsterdam. Large infra org; EU remote-friendly."
+    enabled: true
+
+  - name: Spotify
+    careers_url: https://jobs.lever.co/spotify
+    scan_method: websearch
+    scan_query: 'site:jobs.lever.co/spotify "Platform" OR "SRE" OR "Infrastructure" remote OR Sweden OR Stockholm OR London'
+    notes: "Stockholm/London. Backstage creators. Large platform org."
+    enabled: true
+
+  - name: N26
+    careers_url: https://job-boards.greenhouse.io/n26
+    api: https://boards-api.greenhouse.io/v1/boards/n26/jobs
+    notes: "Berlin + Barcelona. Mobile bank. Strong platform team."
+    enabled: true
+
+  - name: Revolut
+    careers_url: https://www.revolut.com/careers
+    scan_method: websearch
+    scan_query: 'site:revolut.com/careers "DevOps" OR "SRE" OR "Platform" OR "Kubernetes"'
+    notes: "London HQ. Fintech. Hires across EU remote."
+    enabled: true
+
+  - name: Wise
+    careers_url: https://wise.jobs
+    scan_method: websearch
+    scan_query: 'site:wise.jobs "DevOps" OR "SRE" OR "Platform" OR "Site Reliability"'
+    notes: "London/Tallinn. Cross-border payments."
+    enabled: true
+
+  - name: Klarna
+    careers_url: https://jobs.lever.co/klarna
+    scan_method: websearch
+    scan_query: 'site:jobs.lever.co/klarna "DevOps" OR "SRE" OR "Platform"'
+    notes: "Stockholm. Fintech unicorn."
+    enabled: true
+
+  - name: Celonis
+    careers_url: https://job-boards.greenhouse.io/celonis
+    api: https://boards-api.greenhouse.io/v1/boards/celonis/jobs
+    notes: "Munich / NYC. Process intelligence + Applied AI."
+    enabled: true
+
+  - name: DeepL
+    careers_url: https://jobs.ashbyhq.com/DeepL
+    scan_method: websearch
+    scan_query: 'site:jobs.ashbyhq.com/DeepL "DevOps" OR "SRE" OR "Platform" OR "Infrastructure"'
+    notes: "Cologne DE. Translation AI. Remote-EU roles."
+    enabled: true
+
+  - name: Aleph Alpha
+    careers_url: https://jobs.ashbyhq.com/AlephAlpha
+    scan_method: websearch
+    scan_query: 'site:jobs.ashbyhq.com/AlephAlpha "Platform" OR "Infrastructure" OR "DevOps"'
+    notes: "Heidelberg DE. Sovereign EU LLM provider."
+    enabled: true
+
+  - name: Mistral AI
+    careers_url: https://jobs.lever.co/mistral
+    scan_method: websearch
+    scan_query: 'site:jobs.lever.co/mistral "Platform" OR "Infrastructure" OR "DevOps"'
+    notes: "Paris. EU AI lab."
+    enabled: true
+
+  - name: Hugging Face
+    careers_url: https://apply.workable.com/huggingface/
+    scan_method: websearch
+    scan_query: 'site:apply.workable.com/huggingface "Platform" OR "Infrastructure" OR "DevOps" OR "SRE"'
+    notes: "Paris / NYC / Remote. Open-source ML hub. Hires remote worldwide."
+    enabled: true
+
+  - name: Contentful
+    careers_url: https://job-boards.greenhouse.io/contentful
+    api: https://boards-api.greenhouse.io/v1/boards/contentful/jobs
+    notes: "Berlin / Denver. Headless CMS."
+    enabled: true
+
+  - name: Personio
+    careers_url: https://www.personio.com/about/careers
+    scan_method: websearch
+    scan_query: 'site:personio.com/about/careers "DevOps" OR "SRE" OR "Platform"'
+    notes: "Munich. HR SaaS unicorn."
+    enabled: true
+
+  - name: Helsing
+    careers_url: https://job-boards.greenhouse.io/helsing
+    api: https://boards-api.greenhouse.io/v1/boards/helsing/jobs
+    notes: "Munich/Berlin/London/Paris. Defence AI."
+    enabled: true
+
+  - name: GetYourGuide
+    careers_url: https://job-boards.greenhouse.io/getyourguide
+    api: https://boards-api.greenhouse.io/v1/boards/getyourguide/jobs
+    notes: "Berlin. Travel marketplace."
+    enabled: true
+
+  - name: HelloFresh
+    careers_url: https://job-boards.greenhouse.io/hellofresh
+    api: https://boards-api.greenhouse.io/v1/boards/hellofresh/jobs
+    notes: "Berlin. Large data/ML platform."
+    enabled: true
+
+  - name: Trade Republic
+    careers_url: https://job-boards.greenhouse.io/traderepublicbank
+    api: https://boards-api.greenhouse.io/v1/boards/traderepublicbank/jobs
+    notes: "Berlin / London / Paris. Neobroker."
+    enabled: true
+
+  - name: Qonto
+    careers_url: https://jobs.lever.co/qonto
+    notes: "Paris / Berlin / Barcelona. SMB neobank."
+    enabled: true
+
+  - name: Adyen
+    careers_url: https://careers.adyen.com
+    scan_method: websearch
+    scan_query: 'site:careers.adyen.com "DevOps" OR "SRE" OR "Platform"'
+    notes: "Amsterdam. Payments platform."
+    enabled: true
+
+  - name: Factorial
+    careers_url: https://job-boards.greenhouse.io/factorial
+    api: https://boards-api.greenhouse.io/v1/boards/factorial/jobs
+    notes: "Barcelona. HR SaaS unicorn."
+    enabled: true
+
+  - name: Wayve
+    careers_url: https://job-boards.greenhouse.io/wayve
+    api: https://boards-api.greenhouse.io/v1/boards/wayve/jobs
+    notes: "London UK. Self-driving AI."
+    enabled: true
+
+  - name: Synthesia
+    careers_url: https://jobs.ashbyhq.com/synthesia
+    scan_method: websearch
+    scan_query: 'site:jobs.ashbyhq.com/synthesia "Platform" OR "Infrastructure" OR "DevOps" OR "SRE"'
+    notes: "London UK. AI video gen. $4B valuation."
+    enabled: true
+
+  - name: Monzo
+    careers_url: https://monzo.com/careers
+    scan_method: websearch
+    scan_query: 'site:monzo.com/careers "DevOps" OR "SRE" OR "Platform"'
+    notes: "London. Mobile bank."
+    enabled: true
+
+  - name: Lovable
+    careers_url: https://jobs.ashbyhq.com/lovable
+    scan_method: websearch
+    scan_query: 'site:jobs.ashbyhq.com/lovable "Platform" OR "Infrastructure" OR "DevOps"'
+    notes: "Stockholm. AI app builder."
+    enabled: true
+
+  # ================================================================
+  # TIER 3 — USA (remote-from-India-friendly, no relocation required)
+  # ================================================================
+
+  - name: Anthropic
+    careers_url: https://job-boards.greenhouse.io/anthropic
+    api: https://boards-api.greenhouse.io/v1/boards/anthropic/jobs
+    notes: "Claude. Some remote-international roles via EoR."
+    enabled: true
+
+  - name: LangChain
+    careers_url: https://jobs.ashbyhq.com/langchain
+    scan_method: websearch
+    scan_query: 'site:jobs.ashbyhq.com/langchain "Platform" OR "Infrastructure" OR "DevOps"'
+    notes: "LangChain/LangSmith. Direct match for kagent stack."
+    enabled: true
+
+  - name: Cloudflare
+    careers_url: https://www.cloudflare.com/careers
+    scan_method: websearch
+    scan_query: 'site:cloudflare.com/careers "DevOps" OR "SRE" OR "Platform" remote'
+    notes: "Remote-friendly. Edge / CDN."
+    enabled: true
+
+  - name: DigitalOcean
+    careers_url: https://www.digitalocean.com/careers
+    scan_method: websearch
+    scan_query: 'site:digitalocean.com/careers "DevOps" OR "SRE" OR "Platform"'
+    notes: "Remote-first. Hires India directly."
+    enabled: true
+
+  - name: Vercel
+    careers_url: https://job-boards.greenhouse.io/vercel
+    api: https://boards-api.greenhouse.io/v1/boards/vercel/jobs
+    notes: "Remote-global. Edge platform."
+    enabled: true
+
+  - name: Supabase
+    careers_url: https://jobs.ashbyhq.com/supabase
+    scan_method: websearch
+    scan_query: 'site:jobs.ashbyhq.com/supabase "Platform" OR "Infrastructure" OR "DevOps"'
+    notes: "Fully remote. Open-source Firebase alt."
+    enabled: true
+
+  - name: PlanetScale
+    careers_url: https://job-boards.greenhouse.io/planetscale
+    api: https://boards-api.greenhouse.io/v1/boards/planetscale/jobs
+    notes: "Remote. Serverless MySQL."
+    enabled: true
+
+  - name: Temporal
+    careers_url: https://job-boards.greenhouse.io/temporal
+    api: https://boards-api.greenhouse.io/v1/boards/temporal/jobs
+    notes: "Remote. Workflow orchestration."
+    enabled: true
+
+  - name: Confluent
+    careers_url: https://careers.confluent.io
+    scan_method: websearch
+    scan_query: 'site:careers.confluent.io "DevOps" OR "SRE" OR "Solutions" OR "Platform" remote'
+    notes: "Kafka creators. Remote-friendly; Bangalore office."
+    enabled: true
+
+  - name: MongoDB
+    careers_url: https://www.mongodb.com/careers
+    scan_method: websearch
+    scan_query: 'site:mongodb.com/careers "DevOps" OR "SRE" OR "Solutions" remote'
+    notes: "Atlas. Remote India hiring."
+    enabled: true
+
+  - name: Datadog
+    careers_url: https://careers.datadoghq.com
+    scan_method: websearch
+    scan_query: 'site:careers.datadoghq.com "DevOps" OR "SRE" OR "Solutions" OR "Platform"'
+    notes: "Observability. India + remote."
+    enabled: true
+
+  - name: New Relic
+    careers_url: https://newrelic.com/about/careers
+    scan_method: websearch
+    scan_query: 'site:newrelic.com/about/careers "DevOps" OR "SRE" OR "Solutions"'
+    notes: "Observability. Hyderabad office + remote."
+    enabled: true
+
+  - name: Dynatrace
+    careers_url: https://careers.dynatrace.com
+    scan_method: websearch
+    scan_query: 'site:careers.dynatrace.com "DevOps" OR "SRE" OR "Solutions"'
+    notes: "APM. Linz Austria HQ + India."
+    enabled: true
+
+  - name: Honeycomb
+    careers_url: https://www.honeycomb.io/careers
+    scan_method: websearch
+    scan_query: 'site:honeycomb.io/careers "Engineer" OR "Solutions" remote'
+    notes: "Remote-first. Observability/tracing."
+    enabled: true
+
+  - name: PagerDuty
+    careers_url: https://www.pagerduty.com/careers
+    scan_method: websearch
+    scan_query: 'site:pagerduty.com/careers "DevOps" OR "SRE" OR "Platform"'
+    notes: "Incident response. Remote-friendly."
+    enabled: true
+
+  - name: Snyk
+    careers_url: https://snyk.io/careers
+    scan_method: websearch
+    scan_query: 'site:snyk.io/careers "DevSecOps" OR "Solutions" OR "Engineer"'
+    notes: "DevSecOps. Remote-EU/UK friendly."
+    enabled: true
+
+  - name: Aqua Security
+    careers_url: https://www.aquasec.com/careers
+    scan_method: websearch
+    scan_query: 'site:aquasec.com/careers "Engineer" OR "Solutions" OR "DevSecOps"'
+    notes: "Trivy creators. Israel HQ; hires remote."
+    enabled: true
+
+  - name: Sysdig
+    careers_url: https://sysdig.com/careers
+    scan_method: websearch
+    scan_query: 'site:sysdig.com/careers "DevOps" OR "Solutions"'
+    notes: "Container runtime security. Remote-global."
+    enabled: true
+
+  - name: Wiz
+    careers_url: https://www.wiz.io/careers
+    scan_method: websearch
+    scan_query: 'site:wiz.io/careers "Solutions" OR "Engineer"'
+    notes: "Cloud security. Remote-friendly."
+    enabled: true
+
+  - name: CrowdStrike
+    careers_url: https://www.crowdstrike.com/careers
+    scan_method: websearch
+    scan_query: 'site:crowdstrike.com/careers "DevOps" OR "SRE" OR "Platform" OR "Cloud Security"'
+    notes: "Remote-heavy. Endpoint / cloud security."
+    enabled: true
+
+  - name: JFrog
+    careers_url: https://jobs.jfrog.com
+    scan_method: websearch
+    scan_query: 'site:jobs.jfrog.com "DevOps" OR "SRE" OR "Solutions"'
+    notes: "Artifactory / DevOps platform. India + remote."
+    enabled: true
+
+  - name: Harness
+    careers_url: https://www.harness.io/careers
+    scan_method: websearch
+    scan_query: 'site:harness.io/careers "DevOps" OR "Solutions" OR "Platform"'
+    notes: "CI/CD. Bangalore + remote."
+    enabled: true
+
+  - name: CircleCI
+    careers_url: https://circleci.com/careers
+    scan_method: websearch
+    scan_query: 'site:circleci.com/careers "DevOps" OR "SRE" OR "Platform"'
+    notes: "CI/CD SaaS. Remote-first."
+    enabled: true
+
+  - name: Spacelift
+    careers_url: https://spacelift.io/careers
+    scan_method: websearch
+    scan_query: 'site:spacelift.io/careers "DevOps" OR "Platform"'
+    notes: "Terraform cloud. Remote-EU/US."
+    enabled: true
+
+  - name: env0
+    careers_url: https://www.env0.com/careers
+    scan_method: websearch
+    scan_query: 'site:env0.com/careers "Engineer" OR "Solutions"'
+    notes: "Terraform automation. Remote."
+    enabled: true
+
+  - name: Weights & Biases
+    careers_url: https://jobs.lever.co/wandb
+    scan_method: websearch
+    scan_query: 'site:jobs.lever.co/wandb "Platform" OR "Infrastructure" OR "DevOps"'
+    notes: "MLOps platform. Remote-global."
+    enabled: true
+
+  - name: Arize AI
+    careers_url: https://job-boards.greenhouse.io/arizeai
+    api: https://boards-api.greenhouse.io/v1/boards/arizeai/jobs
+    notes: "LLMOps / AI observability."
+    enabled: true
+
+  - name: RunPod
+    careers_url: https://job-boards.greenhouse.io/runpod
+    api: https://boards-api.greenhouse.io/v1/boards/runpod/jobs
+    notes: "GPU cloud for AI. Remote-global."
+    enabled: true
+
+  - name: Solo.io
+    careers_url: https://www.solo.io/careers
+    scan_method: websearch
+    scan_query: 'site:solo.io/careers "Engineer" OR "Solutions" OR "Support"'
+    notes: "Istio/Ambient Mesh creators. Direct match for his Istio work."
+    enabled: true
+
+  - name: Tetrate
+    careers_url: https://tetrate.io/careers
+    scan_method: websearch
+    scan_query: 'site:tetrate.io/careers "Engineer" OR "Solutions"'
+    notes: "Istio enterprise. Remote-global."
+    enabled: true
+
+  - name: Buoyant (Linkerd)
+    careers_url: https://buoyant.io/jobs
+    scan_method: websearch
+    scan_query: 'site:buoyant.io/jobs "Engineer" OR "Solutions"'
+    notes: "Linkerd service mesh. Remote-first."
+    enabled: true
+
+  - name: Mirantis
+    careers_url: https://www.mirantis.com/company/careers
+    scan_method: websearch
+    scan_query: 'site:mirantis.com/company/careers "DevOps" OR "Kubernetes" OR "Platform"'
+    notes: "K8s / Docker Enterprise. Remote-global."
+    enabled: true
+
+  - name: Nutanix
+    careers_url: https://www.nutanix.com/company/careers
+    scan_method: websearch
+    scan_query: 'site:nutanix.com/company/careers "DevOps" OR "Platform" OR "Kubernetes"'
+    notes: "Hybrid cloud. India offices + remote."
+    enabled: true
+
+  # ================================================================
+  # TIER 4 — UAE / DUBAI / MIDDLE EAST
+  # Most require on-site; flagged below for ones with remote/EoR options.
+  # ================================================================
+
+  - name: Careem (Uber)
+    careers_url: https://careers.careem.com
+    scan_method: websearch
+    scan_query: 'site:careers.careem.com "DevOps" OR "SRE" OR "Platform" OR "Kubernetes"'
+    notes: "Dubai. Uber-owned. Hires across MENA incl. remote roles."
+    enabled: true
+
+  - name: Noon
+    careers_url: https://careers.noon.com
+    scan_method: websearch
+    scan_query: 'site:careers.noon.com "DevOps" OR "SRE" OR "Platform" OR "Kubernetes"'
+    notes: "Dubai. E-commerce giant MENA. Hires from India."
+    enabled: true
+
+  - name: Talabat (Delivery Hero)
+    careers_url: https://careers.talabat.com
+    scan_method: websearch
+    scan_query: 'site:careers.talabat.com "DevOps" OR "SRE" OR "Platform"'
+    notes: "Dubai. Food delivery MENA. DH-owned."
+    enabled: true
+
+  - name: Property Finder
+    careers_url: https://www.propertyfinder.ae/en/careers
+    scan_method: websearch
+    scan_query: 'site:propertyfinder.ae "DevOps" OR "SRE" OR "Platform"'
+    notes: "Dubai. Real-estate marketplace."
+    enabled: true
+
+  - name: Kitopi
+    careers_url: https://kitopi.com/careers
+    scan_method: websearch
+    scan_query: 'site:kitopi.com/careers "DevOps" OR "SRE" OR "Platform"'
+    notes: "Dubai. Cloud kitchens unicorn."
+    enabled: true
+
+  - name: Tabby
+    careers_url: https://tabby.ai/careers
+    scan_method: websearch
+    scan_query: 'site:tabby.ai/careers "DevOps" OR "SRE" OR "Platform"'
+    notes: "Dubai/Riyadh. BNPL fintech. Remote-friendly."
+    enabled: true
+
+  - name: Tamara
+    careers_url: https://tamara.co/en/careers.html
+    scan_method: websearch
+    scan_query: 'site:tamara.co "DevOps" OR "SRE" OR "Platform"'
+    notes: "Riyadh/Dubai. BNPL fintech."
+    enabled: true
+
+  - name: G42
+    careers_url: https://www.g42.ai/careers
+    scan_method: websearch
+    scan_query: 'site:g42.ai/careers "DevOps" OR "SRE" OR "AI Platform" OR "Cloud"'
+    notes: "Abu Dhabi. AI + cloud. Government-backed."
+    enabled: true
+
+  - name: Bayzat
+    careers_url: https://bayzat.com/careers
+    scan_method: websearch
+    scan_query: 'site:bayzat.com/careers "DevOps" OR "Platform"'
+    notes: "Dubai. HR/insurance SaaS."
+    enabled: true
+
+  - name: MoEngage
+    careers_url: https://www.moengage.com/careers
+    scan_method: websearch
+    scan_query: 'site:moengage.com/careers "DevOps" OR "SRE" OR "Platform"'
+    notes: "India HQ + Dubai/SEA offices. Marketing automation."
+    enabled: true
+
+  - name: Swvl
+    careers_url: https://www.swvl.com/careers
+    scan_method: websearch
+    scan_query: 'site:swvl.com/careers "DevOps" OR "SRE" OR "Platform"'
+    notes: "Dubai. Mass-transit tech."
+    enabled: true
+
+  - name: Presight (G42)
+    careers_url: https://www.presight.ai/careers
+    scan_method: websearch
+    scan_query: 'site:presight.ai/careers "DevOps" OR "Platform" OR "AI"'
+    notes: "Abu Dhabi. Big data AI (G42 subsidiary)."
+    enabled: true
+
+  # ================================================================
+  # TIER 5 — INDIA (fallback tier — lower priority)
+  # Strong product cos; some have remote roles + overseas posting pipelines.
+  # ================================================================
+
+  - name: Razorpay
+    careers_url: https://razorpay.com/jobs
+    scan_method: websearch
+    scan_query: 'site:razorpay.com/jobs "DevOps" OR "SRE" OR "Platform" OR "Kubernetes"'
+    notes: "Bangalore. Fintech unicorn."
+    enabled: true
+
+  - name: Flipkart
+    careers_url: https://www.flipkartcareers.com
+    scan_method: websearch
+    scan_query: 'site:flipkartcareers.com "DevOps" OR "SRE" OR "Platform" OR "Kubernetes"'
+    notes: "Bangalore. Walmart-owned."
+    enabled: true
+
+  - name: Swiggy
+    careers_url: https://careers.swiggy.com
+    scan_method: websearch
+    scan_query: 'site:careers.swiggy.com "DevOps" OR "SRE" OR "Platform" OR "Kubernetes"'
+    notes: "Bangalore. Food-tech unicorn."
+    enabled: true
+
+  - name: Zomato
+    careers_url: https://www.zomato.com/careers
+    scan_method: websearch
+    scan_query: 'site:zomato.com/careers "DevOps" OR "SRE" OR "Platform" OR "Kubernetes"'
+    notes: "Gurgaon. Strong infra hiring."
+    enabled: true
+
+  - name: CRED
+    careers_url: https://careers.cred.club
+    scan_method: websearch
+    scan_query: 'site:careers.cred.club "DevOps" OR "SRE" OR "Platform"'
+    notes: "Bangalore. Premium fintech."
+    enabled: true
+
+  - name: PhonePe
+    careers_url: https://www.phonepe.com/careers
+    scan_method: websearch
+    scan_query: 'site:phonepe.com/careers "DevOps" OR "SRE" OR "Platform" OR "Kubernetes"'
+    notes: "Bangalore. Massive scale SRE."
+    enabled: true
+
+  - name: Postman
+    careers_url: https://www.postman.com/company/careers
+    scan_method: websearch
+    scan_query: 'site:postman.com/company/careers "DevOps" OR "SRE" OR "Platform"'
+    notes: "Bangalore + SF. API platform unicorn."
+    enabled: true
+
+  - name: Hasura
+    careers_url: https://hasura.io/careers
+    scan_method: websearch
+    scan_query: 'site:hasura.io/careers "DevOps" OR "SRE" OR "Platform" OR "Kubernetes"'
+    notes: "Bangalore + fully-remote. GraphQL platform."
+    enabled: true
+
+  - name: Chargebee
+    careers_url: https://www.chargebee.com/careers
+    scan_method: websearch
+    scan_query: 'site:chargebee.com/careers "DevOps" OR "SRE" OR "Platform"'
+    notes: "Chennai + Netherlands. Subscription billing SaaS."
+    enabled: true
+
+  - name: Freshworks
+    careers_url: https://www.freshworks.com/company/careers
+    scan_method: websearch
+    scan_query: 'site:freshworks.com/company/careers "DevOps" OR "SRE" OR "Platform"'
+    notes: "Chennai. NASDAQ-listed SaaS."
+    enabled: true
+
+  - name: BrowserStack
+    careers_url: https://www.browserstack.com/careers
+    scan_method: websearch
+    scan_query: 'site:browserstack.com/careers "DevOps" OR "SRE" OR "Platform"'
+    notes: "Mumbai. Testing infra unicorn."
+    enabled: true
